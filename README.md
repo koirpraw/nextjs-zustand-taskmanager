@@ -108,3 +108,21 @@ export const useTaskStore = create<State & Actions>()(
 Inside the set function, it creates a new state object where the tasks property is a new array created by mapping over the current tasks array. For each task in the tasks array, it checks if the id of the task is equal to the id passed to the updateTask function. If it is, it creates a new task object with the same properties as the current task (using the spread operator ...task), but with the status replaced by the new status. If the id of the task is not equal to the id passed to the updateTask function, it simply returns the task as is.
 
 This approach ensures that the state is updated immutably, which is a key principle in React state management. It means that instead of modifying the existing state object or its tasks array directly, you always create new objects or arrays when you want to make changes. This helps prevent bugs and makes your state changes easier to track and understand.
+
+## State Management implementation in the components:
+- Once the store is setup we can access the state and actions using the useTaskStore hook (this can be named anything we want with "use" keyword as prefix, in ourcase we are managing the task store and hence useTaskStore). The useTaskStore hook can be used to access the state and actions in any component. The state and actions can be accessed as follows:
+
+```javascript
+
+import { useTaskStore } from "../lib/store";
+
+const tasks = useTaskStore((state) => state.tasks);
+
+const addTask = useTaskStore((state) => state.addTask);
+```
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## License
+
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.
+
