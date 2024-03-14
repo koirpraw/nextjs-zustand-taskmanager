@@ -1,5 +1,10 @@
 # Global State Management with Zustand
 
+## ScreenShot
+![zustand-kanban-taskmanager](https://github.com/koirpraw/nextjs-zustand-taskmanager/assets/7278348/cc24bef3-fc71-44c1-8633-ca73b387aa8a)
+
+## Store(state Management) Setup:
+
 - After a  new project is created, the first thing to do is to install the Zustand library. This can be done by running the following command in the terminal:
 
 ```bash
